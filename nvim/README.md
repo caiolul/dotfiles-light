@@ -16,6 +16,12 @@ Ensure you have Neovim installed. Then, clone this repository and install the pl
 
 ```sh
 # Clone the repository
+if [ -d nvim ]; then mv nvim nvim_bk; fi # Backup existing nvim folder
+git clone --depth 1 --filter=blob:none --sparse https://github.com/caiolul/dotfiles-light.git nvim 
+cd nvim
+git sparse-checkout set nvim
+mv nvim/* .
+rm -rf .git nvim
 ```
 
 ```sh
