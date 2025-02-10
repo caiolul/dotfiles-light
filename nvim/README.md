@@ -25,6 +25,12 @@ rm -rf .git nvim
 ```
 
 ```sh
+# Install vim-plug to manage plugins
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+```sh
 # Install LSP servers
 npm install -g pyright typescript-language-server vscode-langservers-extracted
 ```
